@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            background-color: blue;
+            height: 20px;
+            width: 30px;
+        }
+    </style>
+</head>
+<body>
+    <form onsubmit="submitFrom()">
+        <input id="n1" type="text " placeholder="Enter your Name" name="num1" />
+        <input data-num2="n2" type="text " placeholder="Enter durName" name="num2" /><br/>
+        <button type="submit" value="submit"></button><br/>
+    </form>
+    <script>
+        function submitFrom(){
+           
+            let number=document.getElementById('n1').value
+            let number2=document.querySelector('[data-num2="n2"]').value
+            alert('hello'+number)
+            alert('hello'+number2)
+            let r=parseInt(number)+parseInt(number2);
+            alert('addition is'+parseInt(r))
+            localStorage.setItem('result',r)
+        }
+    </script>
+</body>
+</html>
